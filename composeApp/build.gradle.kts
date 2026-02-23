@@ -3,7 +3,7 @@ import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
-    alias(libs.plugins.androidApplication)
+    alias(libs.plugins.androidLibrary)
     alias(libs.plugins.composeMultiplatform)
     alias(libs.plugins.composeCompiler)
     id("maven-publish")
@@ -82,12 +82,13 @@ group = "com.datetime.kmp" // Ye tumhari library ka group hoga
 version = "1.0.0"          // Ye version hoga
 
 // GitHub par publish karne ka setup
+// GitHub par publish karne ka setup
 publishing {
     repositories {
         maven {
             name = "GitHubPackages"
-            // Yahan apne GitHub ka username aur Repo ka naam daalna
-            url = uri("https://maven.pkg.github.com/YOUR_GITHUB_USERNAME/DatetimeKMP")
+            // Yahan YOUR_GITHUB_USERNAME ki jagah viditmathur6 daal do
+            url = uri("https://maven.pkg.github.com/viditmathur6/DatetimeKMP")
             credentials {
                 username = System.getenv("GITHUB_ACTOR")
                 password = System.getenv("GITHUB_TOKEN")
