@@ -1,0 +1,28 @@
+name: Publish KMP Library
+
+on:
+  push:
+    tags:
+      - 'v*' # Jab hum version tag (jaise v1.0.0) push karenge tabhi ye chalega
+
+jobs:
+  publish:
+    runs-on: macos-latest # iOS build ke liye Mac server zaroori hai
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Setup Java
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'zulu'
+          java-version: '17'
+
+      - name: Make gradlew executable
+        run: chmod +x ./gradlew
+
+      - name: Publish to GitHub Packages
+        run: ./gradlew publish
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
