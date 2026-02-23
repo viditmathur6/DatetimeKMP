@@ -78,8 +78,8 @@ dependencies {
     debugImplementation(libs.compose.uiTooling)
 }
 
-group = "com.datetime.kmp" // Ye tumhari library ka group hoga
-version = "1.0.3"          // Ye version hoga
+group = "com.github.viditmathur6.datetimekmp" // Ye tumhari library ka group hoga
+version = "1.0.4"          // Ye version hoga
 
 // GitHub par publish karne ka setup
 // GitHub par publish karne ka setup

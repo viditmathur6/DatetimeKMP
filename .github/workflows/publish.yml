@@ -9,6 +9,11 @@ jobs:
   publish:
     runs-on: macos-latest # iOS build ke liye Mac server zaroori hai
 
+
+    permissions:
+        contents: read
+        packages: write
+
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
