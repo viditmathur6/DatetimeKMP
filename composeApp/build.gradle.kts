@@ -79,7 +79,7 @@ dependencies {
 }
 
 group = "com.github.viditmathur6.datetimekmp" // Ye tumhari library ka group hoga
-version = "1.0.4"          // Ye version hoga
+version = "1.0.5"          // Ye version hoga
 
 // GitHub par publish karne ka setup
 // GitHub par publish karne ka setup
@@ -94,6 +94,10 @@ publishing {
                 password = System.getenv("GITHUB_TOKEN")
             }
         }
+    }
+    // NAYA CODE: Ye sabhi capital letters ko small (lowercase) kar dega!
+    publications.withType<MavenPublication>().configureEach {
+        artifactId = artifactId.lowercase()
     }
 }
 
