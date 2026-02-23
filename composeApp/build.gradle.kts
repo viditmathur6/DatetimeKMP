@@ -79,7 +79,7 @@ dependencies {
 }
 
 group = "com.datetime.kmp" // Ye tumhari library ka group hoga
-version = "1.0.0"          // Ye version hoga
+version = "1.0.3"          // Ye version hoga
 
 // GitHub par publish karne ka setup
 // GitHub par publish karne ka setup
